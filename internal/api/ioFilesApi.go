@@ -9,11 +9,13 @@ import (
 	"os"
 )
 
-var PathToLogs string = "output/latest.log"
-var PathToInEvents string = "input/events_in.txt"
-var PathToOutEvents string = "output/events_out.txt"
-var PathToFinalReport string = "output/final_report.txt"
-var PathToConfig string = "config/config.json"
+var (
+	PathToLogs        = "output/latest.log"
+	PathToInEvents    = "input/events_in.txt"
+	PathToOutEvents   = "output/events_out.txt"
+	PathToFinalReport = "output/final_report.txt"
+	PathToConfig      = "config/config.json"
+)
 
 func ReadEvents() []Event {
 	file, err := os.Open(PathToInEvents)
